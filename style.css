@@ -14,6 +14,13 @@ header {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+header .profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
 nav {
   background-color: #0066cc;
   padding: 10px;
@@ -37,11 +44,17 @@ main {
   padding: 0 20px;
 }
 
-article {
+.story-list article {
   background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.story-list article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 article h2 a {
@@ -67,4 +80,12 @@ footer {
   background-color: #fff;
   box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
   margin-top: 20px;
+}
+
+/* Optional: small responsive tweaks */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
 }
